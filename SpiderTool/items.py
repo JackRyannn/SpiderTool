@@ -26,3 +26,10 @@ class SpidertoolItem(scrapy.Item):
     subject = scrapy.Field();
     pic = scrapy.Field();
     pass
+
+class SpidertoolItem2(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    title = scrapy.Field();
+    url = scrapy.Field();
+    pass

@@ -7,6 +7,9 @@ class mt_spider(scrapy.Spider):
     start_urls = [
         "https://movie.douban.com/cinema/nowplaying/beijing/"
     ]
+    custom_settings = {
+        'ITEM_PIPELINES': {'SpiderTool.pipelines.SpidertoolPipeline': 300},
+    }
 
     def parse(self, response):
         for sel in response.xpath('//li[@data-score]'):

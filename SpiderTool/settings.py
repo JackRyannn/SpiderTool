@@ -74,6 +74,7 @@ ROBOTSTXT_OBEY = False
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'SpiderTool.pipelines.SpidertoolPipeline': 300,
+   'SpiderTool.pipelines.SpidertoolPipeline2': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
