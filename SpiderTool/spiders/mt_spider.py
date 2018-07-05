@@ -14,7 +14,7 @@ class mt_spider(scrapy.Spider):
             item['title'] = sel.xpath('@data-title').extract()
             item['score'] = sel.xpath('@data-score').extract()
             # 低于五分滚粗
-            if(float(item['score'][0])<5):
+            if(float(item['score'][0])<7.5):
                 continue
             item['star'] = sel.xpath('@data-star').extract()
             item['release'] = sel.xpath('@data-release').extract()
