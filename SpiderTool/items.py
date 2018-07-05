@@ -12,17 +12,6 @@ class SpidertoolItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     title = scrapy.Field();
-    score = scrapy.Field();
-    star = scrapy.Field();
-    release = scrapy.Field();
-    duration = scrapy.Field();
-    director = scrapy.Field();
-    actors = scrapy.Field();
-    region = scrapy.Field();
-    category = scrapy.Field();
-    enough = scrapy.Field();
-    showed = scrapy.Field();
-    votecount = scrapy.Field();
-    subject = scrapy.Field();
-    pic = scrapy.Field();
+    url = scrapy.Field();
+
     pass
