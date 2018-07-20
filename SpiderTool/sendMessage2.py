@@ -76,6 +76,8 @@ if __name__ == "__main__":
     """
     cursor.execute(sql)
     results = cursor.fetchall()
+    cursor.execute(sql_update)
+    conn.commit()
     for result in results:
         title = str(result[0])
         url = str(result[1])
@@ -84,8 +86,7 @@ if __name__ == "__main__":
         # 要发送的手机号码
         phones = [
                   "17616271667",
-                  "17563940512"
+                  
                   ]
         for phone in phones:
             sender.sendMsg("86", phone, "电影名称《找房记》,评分"+"：负分，主演："  + url)
-    cursor.execute(sql_update)

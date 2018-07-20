@@ -6,14 +6,18 @@ class mt_spider(scrapy.Spider):
     name = "rent"
     start_urls = [
         "https://www.douban.com/group/zhufang/",
-        "https://www.douban.com/group/279962/"
+        "https://www.douban.com/group/279962/",
+   	"https://www.douban.com/group/opking/",
+	"https://www.douban.com/group/625354/",
+	"https://www.douban.com/group/465554/",
+    	"https://www.douban.com/group/beijingzufang/",
     ]
     custom_settings = {
         'ITEM_PIPELINES': {'SpiderTool.pipelines.SpidertoolPipeline2': 300},
     }
     def parse(self, response):
-        keywords = ["望京","花家地","将台"]
-        avoid = ["求租"]
+        keywords = ["望京南","花家地","将台","亮马桥"]
+        avoid = ["求租","妹子","女生","只限"]
 
         for sel in response.xpath('//td[@class="title"]/a[@title]'):
             flag = False
