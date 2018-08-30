@@ -16,7 +16,7 @@ class mt_spider(scrapy.Spider):
         'ITEM_PIPELINES': {'SpiderTool.pipelines.SpidertoolPipeline2': 300},
     }
     def parse(self, response):
-        keywords = ["望京南","花家地","将台","亮马桥"]
+        keywords = ["西二旗","上地","百度大厦","龙泽"]
         avoid = ["求租","妹子","女生","只限"]
 
         for sel in response.xpath('//td[@class="title"]/a[@title]'):
