@@ -9,7 +9,7 @@ import json
 import hashlib
 import random
 import time
-
+import os
 
 # 定义发送短信的类
 class SmsSender:
@@ -85,8 +85,9 @@ if __name__ == "__main__":
         sender = SmsSender(1400092370, "ae30aa4bc2785bb6491c1a2ffb0bf9e8")
         # 要发送的手机号码
         phones = [
-                  "17616271667",
-                  
+                 
+                  "15168842183", 
                   ]
         for phone in phones:
-            sender.sendMsg("86", phone, "电影名称《找房记》,评分"+"：负分，主演："  + url)
+            sender.sendMsg("86", phone, "电影名称《浩翔找房记》,评分"+"：负分，主演："  + url)
+        os.system("python3 /root/renchao/app/sendMail/main.py 982767079@qq.com MailNotice " + url)
